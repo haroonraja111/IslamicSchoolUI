@@ -1,0 +1,175 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~@fortawesome/fontawesome-free/css/solid.css";
+@import "~@fortawesome/fontawesome-free/css/regular.css";
+@import "~@fortawesome/fontawesome-free/css/brands.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  /* border: 1px solid red; */
+}
+:host {
+  --color-1: #f5dc65;
+  --color: #586e6b;
+  --background: #fff;
+  --box-color: #daf1d0;
+}
+body {
+  background-color: var(--box-color);
+  height: 100vh;
+}
+/*   Start heading section styling start here */
+#heading-section {
+  position: relative;
+  top: 0px;
+  height: 9vh;
+}
+body img {
+  width: 51%;
+}
+#heading-row {
+  max-width: 100%;
+  /* height: 24vh; */
+  position: relative;
+  top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: center;
+}
+#heading-row .col {
+  text-align: center;
+  max-width: fit-content;
+}
+#heading-row .col h1 , p {
+  color: var(--color);
+}
+
+/*      main feilds sections start here   */
+#main-field {
+  position: relative;
+  top: 41px;
+}
+#main-field-row {
+  position: relative;
+  left: 36px;
+  max-width: 88%;
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 1rem;
+}
+#main-field-col-1 {
+  height: 9vh;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+#main-field-col-1 span {
+  color: var(--color);
+  position: relative;
+  right: -222px;
+}
+#main-field-col-1 label {
+  font-size: medium;
+  color: var(--color);
+}
+#main-field-col-1 input[type="text"] {
+  width: 85vw;
+  outline: none;
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid var(--color);
+  border-left: none;
+}
+#main-field-col-2 {
+  height: 9vh;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+#main-field-col-2 span {
+  color: var(--color);
+  position: relative;
+  right: -222px;
+}
+#main-field-col-2 label {
+  font-size: medium;
+  color: var(--color);
+}
+#main-field-col-2 input[type="email"] {
+  width: 85vw;
+  outline: none;
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid var(--color);
+  border-left: none;
+}
+#main-field-col-3 {
+  height: 9vh;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+#main-field-col-3 span {
+  color: var(--color);
+  position: relative;
+  right: -222px;
+}
+#main-field-col-3 label {
+  font-size: medium;
+  color: var(--color);
+}
+#main-field-col-3 input[type="password"] {
+  width: 85vw;
+  outline: none;
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid var(--color);
+  border-left: none;
+}
+
+/*  Sign up btn section styling start here */
+#btn-section {
+  height: 15vh;
+  position: relative;
+  top: 26px;
+}
+#signup-btn-row {
+  height: 15vh;
+  max-width: 104%;
+}
+#signup-btn-row .col {
+  height: 15vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+#signup-btn-row .col button {
+  width: 50vw;
+  height: 4vh;
+  background-color: var(--color-1);
+}
+
+/* ============ */
+#footer-line-section {
+  position: relative;
+  top: 78px;
+  max-width: 100%;
+}
+#footer-line-row {
+  max-width: 100%;
+}
+#footer-line-row .col {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  color: var(--color);
+}

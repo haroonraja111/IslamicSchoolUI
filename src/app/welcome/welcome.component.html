@@ -1,0 +1,56 @@
+
+<body>
+  <div class="img-container">
+      <img src="/assets/pngegg.png" alt="">
+  </div>
+
+  <!-- Heading section start here -->
+  <section id="heading-section">
+      <div class="row" id="heading-row">
+          <div class="col">
+              <h1>Log In</h1>
+              <p>Log In here to Continue</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- main feilds section start here -->
+  <section id="main-field">
+    <form #loginForm="ngForm" class="form" (ngSubmit)="onLogin()">
+      <div class="row" id="main-field-row">
+        <div class="col" id="main-field-col-1">
+            <label for="">User name</label>
+            <input type="email" name="" [(ngModel)]="model.username" name="username" autocomplete="off">
+        </div>
+        <div class="col" id="main-field-col-2">
+            <label for="">Password</label>
+            <input type="password" name="" [(ngModel)]="model.password" name="password">
+        </div>
+        <div *ngIf="errorMessage" class="col">
+          {{errorMessage}}
+      </div>
+    </div>
+     <!--  sign in button section start here -->
+  <section id="btn-section">
+    <div class="row" id="login-btn-row">
+        <div class="col" id="login-col-1">
+            <button (click)="resetForm(loginForm)" class="btn">Cancel</button>
+        </div>
+        <div class="col" id="login-col-2">
+            <button type="submit" class="btn">Log-In</button>
+        </div>
+    </div>
+</section>
+    </form>
+  </section>
+
+  <!-- already hava an account section start here -->
+  <section id="footer-line-section">
+      <div class="row" id="footer-line-row">
+          <div class="col">
+              <p>Don't have an account?<b><a style="text-decoration: none; color: #586e6b;" (click)="toSignup()"> SignUp Here!</a></b></p>
+          </div>
+      </div>
+  </section>
+
+</body>

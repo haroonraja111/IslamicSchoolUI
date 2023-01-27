@@ -1,0 +1,49 @@
+<body>
+  <section id="parent-section">
+    <section class="section">
+      <div class="row" id="header-row">
+        <div class="col-3" id="header-icon">
+          <a (click)="onBack()" style="text-decoration: none;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+        </div>
+        <div class="col-6" id="header-heading">
+          <h2>Edit User Roles</h2>
+        </div>
+        <div class="col-3" id="header-user-icon">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- header section Ends Here -->
+
+    <section class="main-section" >
+      <div
+        class="row"
+        style="height: 4vh; width: 22%;">
+      </div>      <!-- Extra Row -->
+
+      <div class="row" id="main-section-row" style="margin-bottom: 15px;" *ngFor="let user of users">
+        <div class="col-3" id="main-first-icon">
+          <img src="/assets/man.png" width="56px" alt="" srcset="">
+        </div>
+        <div
+          class="col-6"
+          id="main-section-heading"
+          >
+          <h1>{{user?.userName}}</h1>
+          <p>{{user?.roles}}</p>
+        </div>
+        <div class="col-3" id="main-section-icon2">
+          <i (click)="openRolesModal(user)" class="fa fa-edit" aria-hidden="true" style="font-weight: bold;">
+           <span> Edit</span>
+          </i>
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+  </section>
+</body>

@@ -1,0 +1,51 @@
+<body>
+  <img src="/assets/pngegg.png" alt="">
+  <!-- Heading section start here -->
+  <section id="heading-section">
+      <div class="row" id="heading-row">
+          <div class="col">
+              <h1>Sign up</h1>
+              <p>Create an account. It's free!</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- main feilds section start here -->
+  <section id="main-field">
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <div class="row" id="main-field-row">
+        <div class="col" id="main-field-col-1">
+            <label for="">User Name</label>
+            <input type="text" name="userName" formControlName="userName" autocomplete="off">
+            <span  *ngIf="userName && userName.invalid && userName.touched">Invalid Entry  <i class="fa fa-circle-info"></i></span>
+        </div>
+        <div class="col" id="main-field-col-2">
+            <label for="">Email</label>
+            <input type="email" name="" formControlName="email">
+            <span *ngIf="email && email.invalid && email.touched">Invalid Entry  <i class="fa fa-circle-info"></i></span>
+        </div>
+        <div class="col" id="main-field-col-3">
+            <label for="">Password</label>
+            <input type="password" name="" formControlName="password">
+            <span *ngIf="password && password.invalid && password.touched">Invalid Entry  <i class="fa fa-circle-info"></i></span>
+        </div>
+    </div>
+    <section id="btn-section">
+      <div class="row" id="signup-btn-row">
+          <div class="col">
+              <button type="submit" class="btn" [disabled]="registerForm.invalid">Sign Up</button>
+          </div>
+      </div>
+  </section>
+    </form>
+  </section>
+
+  <section id="footer-line-section">
+      <div class="row" id="footer-line-row">
+          <div class="col">
+              <p>Already have an account? <b><a style="text-decoration: none; color: #586e6b;" (click)="onLogin()"> Log In Here!</a></b> </p>
+          </div>
+      </div>
+  </section>
+
+</body>

@@ -1,0 +1,275 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~@fortawesome/fontawesome-free/css/solid.css";
+@import "~@fortawesome/fontawesome-free/css/regular.css";
+@import "~@fortawesome/fontawesome-free/css/brands.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+body {
+    position: relative;
+    top: 0;
+  background-color: #D0EFC4;
+  height: 100vh;
+  border: 1px solid transparent;
+}
+.section {
+  position: relative;
+  top: 0;
+}
+#head-container {
+  margin-top: 20px;
+  width: 100%;
+}
+#head-container h1 {
+  position: relative;
+  top: 0;
+  left: 16px;
+  max-width: fit-content;
+
+  color: #336342;
+  text-align: left;
+  font-size: 27px;
+  font-family: "Rubik", sans-serif;
+}
+#head-container p {
+  position: relative;
+  top: 0;
+  left: 16px;
+  max-width: fit-content;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  color: #8fb793;
+}
+
+/* ///////////////////////////////// */
+#main-container {
+  position: relative;
+  width: 378px;
+  top: 27px;
+  right: -4px;
+  display: flex;
+  background-color: #fff;
+  border-radius: 35px 35px 30px 30px;
+}
+#main-row {
+  width: 100%;
+  height: 78vh;
+}
+#parent-col {
+  position: relative;
+  border-radius: 5px;
+}
+#main-child-row {
+  display: block;
+  position: absolute;
+  top: 5%;
+  right: 16px;
+}
+#main-child-col-1 {
+  position: relative;
+  left: 10px;
+  margin: 5px;
+  width: 41vw;
+  border-radius: 20px;
+  background-color: #f1e3b5;
+  height: 20vh;
+}
+#main-child-col-2 {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  margin: 5px;
+  width: 41vw;
+  border-radius: 20px;
+  background-color: #d9f7ad;
+  height: 20vh;
+}
+#main-child-col-3 {
+  position: relative;
+  top: 21px;
+  margin: 5px;
+  width: 41vw;
+  border-radius: 20px;
+  height: 20vh;
+}
+#main-child-col-4 {
+  position: relative;
+  top: 2px;
+  margin: 5px;
+  width: 41vw;
+  border-radius: 20px;
+  height: 20vh;
+}
+#main-child-col-5 {
+  position: relative;
+  top: 12px;
+  left: 0;
+  margin: 5px;
+  width: 41vw;
+  border-radius: 20px;
+  background-color: #ffd0c8;
+  height: 20vh;
+}
+#main-child-col-6 {
+  position: relative;
+  top: 21px;
+  left: 0;
+  margin: 5px;
+  width: 41vw;
+  border-radius: 20px;
+  background-color: #d9d7d4;
+  height: 20vh;
+}
+#inner-child-row {
+  text-align: end;
+  display: block;
+  height: 4vh;
+  position: relative;
+  top: 6px;
+}
+#inner-child-col {
+  display: block;
+  text-align: right;
+}
+#first-img-col {
+  display: flex;
+  text-align: left;
+}
+#inner-child-col img {
+  width: 9vw;
+}
+#dot-col {
+  position: relative;
+  top: 4px;
+  right: -50px;
+  max-width: fit-content;
+  text-align: end;
+}
+
+/* three dots styling start here */
+.dot {
+  height: 6px;
+  width: 6px;
+  margin-left: -15px;
+  background-color: #a3a3a3;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: right;
+}
+/* three dots styling ends here */
+
+/* students info section start here */
+#student-info {
+  height: 20vh;
+  display: grid;
+  color: #ecbe34;
+  font-family: var(--main-family);
+  text-align: center;
+  align-content: center;
+}
+#student-info h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 36px;
+}
+#PO-student {
+  display: grid;
+  text-align: center;
+  align-content: center;
+  position: relative;
+  left: 10px;
+  border-radius: 15px;
+  background-color: #d9f7ad;
+}
+#PO-student h2 {
+  font-size: 16px;
+  color: var(--White);
+}
+#project {
+  display: grid;
+  text-align: center;
+  align-content: center;
+  position: relative;
+  left: 0;
+  border-radius: 15px;
+  background-color: #ffd0c8;
+}
+#project h2 {
+  font-size: 16px;
+  color: var(--White);
+}
+#task-board-heading {
+  display: grid;
+  align-items: center;
+  text-align: left;
+  position: relative;
+  left: 10px;
+}
+#task-board-icon {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #336342;
+}
+#view-more {
+  font-family: var(--main-family);
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  left: -14px;
+  top: 11px;
+}
+/* ////////////////////////////////////// */
+#footer-parent-section {
+  position: relative;
+  color: #edcba1;
+  bottom: -50px;
+  right: -1px;
+  font-size: 20px;
+}
+#footer-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer-btn {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 30vw;
+  height: 5vh;
+  color: #edcba1;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#footer-btn button {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 38px;
+  width: 24vw;
+  border-radius: 8px;
+  font-family: var(--main-family);
+  color: #fdfeff;
+  font-size: 17px;
+  background-color: #7ac256;
+}
+#footer-btn span {
+  position: relative;
+  /* top: 0; */
+  right: -2px;
+}
+#footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6d998c;
+}
