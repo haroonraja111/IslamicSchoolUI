@@ -22,4 +22,7 @@ updateUserRoles(username: string, roles: string[]){
 public getBranches(): Observable<Branches> {
   return this.http.get<Branches>(this.baseUrl + 'Branch');
 }
+public addBracnh(bracnh: Branches): Observable<Branches>{
+  return this.http.post<Branches>(this.baseUrl + 'Branch', bracnh);
+}
 }

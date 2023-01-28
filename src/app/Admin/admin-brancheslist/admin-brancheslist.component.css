@@ -12,6 +12,13 @@
   font-family: "Rubik", sans-serif;
 }
 
+:host{
+  --light-green : #cceccc;
+  --dark-green : #71C650;
+  --font-color : #586E6B;
+  --golden : #BC9C00;
+  --main-family : font-family: "Rubik", sans-serif;
+}
 body {
   background-image: linear-gradient(to right, #ffee90, #fbf4cd);
   height: 100vh;
@@ -29,7 +36,7 @@ body {
   position: absolute;
   max-width: 103%;
   height: auto;
-  top: 9px;
+  top: 3px;
   right: 15px;
   left: 3px;
 }
@@ -50,21 +57,18 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
-#dot-col {
-  position: relative;
-  top: 4px;
-  text-align: end;
+#second-icon-col button {
+  width: 8vw;
+  height: 3.7vh;
+  background-color: #ddc86a;
+  color: #586a47;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  border-radius: 50%;
 }
 
-/* three dots styling start here */
-.dot {
-  height: 6px;
-  width: 6px;
-  background-color: #586a47;
-  border-radius: 50%;
-  display: inline-block;
-  text-align: right;
-}
 
 /* Hero section start here */
 #hero {
@@ -136,10 +140,11 @@ body {
   left: 10px;
   bottom: 566px;
 }
-#dropdown-btn button {
+#dropdown-btn .btn {
   color: #ffffff;
   background-color: #74c955;
   font-size: 13px;
+  border-radius: 8px;
 }
 #search-col {
   display: grid;
@@ -150,14 +155,99 @@ body {
   position: relative;
   left: -12px;
 }
+
+
+
+/* plus button offcanvas styling start here */
+#sortby-offcanva-top-row{
+  width: 100vw;
+}
+#sortby-offcanva-top-col-2{
+  position: relative;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  justify-content: flex-end;
+  align-content: center;
+}
+/* plus button offcanvas body styling start here */
+.offcanvas-body{
+  background-color: var(--light-green);
+  height: 50%;
+}
+#input-feild-section{
+  position: relative;
+  top: 44px;
+}
+#offcanvas-hero-row{
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 10px;
+}
+#offcanvas-hero-col{
+  padding: 7px;
+}
+#offcanvas-hero-col h2{
+  color: var(--font-color);
+}
+#offcanvas-main-row{
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 10px;
+  justify-content: center;
+  height: 25vh;
+}
+#offcanvas-main-row label{
+  color: var(--golden);
+}
+input[type=text]{
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid var(--font-color);
+  background: none;
+  outline: none;
+  width: 67vw;
+}
+
+#offcanvas-main-col-1{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 7vh;
+}
+#offcanvas-main-col-2{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 7vh;
+}
+#offcanvas-main-col-3{
+  display: grid;
+  justify-content: center;
+}
+#offcanvas-main-col-3 #btn{
+  background-color: var(--golden);
+  width: 26vw;
+  color: var(--light-green);
+}
+
+
+
+
+
+
+
 /* ------------------------ */
 #main-sec-row {
   position: absolute;
-  top: -160px;
-  left: 17px;
-  width: 92vw;
-  height: 65vh;
-  max-width: 100%;
+  top: 55px;
+  left: 18px;
+  /* height: 39vh; */
+  max-width: 90%;
   text-align: center;
   display: inline-flex;
   justify-content: space-between;
@@ -169,7 +259,7 @@ body {
   color: #586a47;
 }
 #main-sec-box1 {
-  max-width: 89vw;
+  width: 90vw;
   background-image: linear-gradient(to right, #cce4c4, #e3fbd9);
   border-radius: 5px;
   font-family: var(--main-family);
@@ -232,3 +322,19 @@ body {
   /* padding-top: 9px; */
   margin-top: 19px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

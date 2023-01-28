@@ -7,12 +7,10 @@
                   <i class="fa fa-arrow-left" aria-hidden="true"></i>
               </div>
               <div class="col" id="second-icon-col">
-                      <!-- Three dots html start here -->
-                     <span class="dot" style="margin:0px;"></span>
-                     <span class="dot" style="margin:3px;"></span>
-                     <span class="dot"></span>
-                   </div>
+                  <!-- Three dots html start here -->
+                  <!-- <button class="btn"><i class="fa fa-plus" aria-hidden="true"></i></button> -->
               </div>
+          </div>
           <!-- </div> -->
       </section> <!--header-section end-->
 
@@ -30,29 +28,65 @@
           </div>
       </section> <!--Hero-Section end-->
 
-      <section id="sortby-sec-parent">    <!--------Main Section start here--------->
-          <section id="sortby-main">      <!---------Sort-by section start --------->
+      <section id="sortby-sec-parent"> <!--------Main Section start here--------->
+          <section id="sortby-main"> <!---------Sort-by section start --------->
               <div class="row" id="sortby-sec-row">
                   <div class="col" id="dropdown-btn">
                       <div class="btn-group">
-                          <button class="btn dropdown-toggle" id="triggerId" data-toggle="dropdown-menu"
-                              aria-haspopup="true" aria-expanded="false">
-                              Sort by
+                          <button class="btn" type="button" data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                              <i class="fa fa-plus" aria-hidden="true"></i>
                           </button>
-                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">
-                              <a class="dropdown-item">Size</a>
-                              <a class="dropdown-item">Name</a>
-                              <a class="dropdown-item">Type</a>
+                          <!-- offcanvas start-->
+                          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                              aria-labelledby="offcanvasExampleLabel">
+                              <div class="offcanvas-header" >
+                                  <div class="row" id="sortby-offcanva-top-row" >
+                                      <div class="col" id="sortby-offcanva-top-col-1">
+                                          <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5> -->
+                                      </div>
+                                      <div class="col" id="sortby-offcanva-top-col-2">
+                                          <button type="button" class="btn-close text-reset"
+                                              data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="offcanvas-body">
+                                  <section id="input-feild-section">
+                                      <!-- hero section -->
+                                  <div class="row" id="offcanvas-hero-row">
+                                      <div class="col" id="offcanvas-hero-col">
+                                          <h2>Add New Class</h2>
+                                      </div>
+                                  </div>
+
+                                  <!-- main inputs section -->
+                                  <div class="row" id="offcanvas-main-row">
+                                    <form [formGroup]="addbranchForm" (ngSubmit)="addBranch()">
+                                      <div class="col" id="offcanvas-main-col-1">
+                                        <label>Class-Name <input type="text" formControlName="className" /></label>
+                                    </div>
+                                    <div class="col" id="offcanvas-main-col-2">
+                                        <label><input type="text" formControlName="classTime"/>Class-Time </label>
+                                    </div>
+                                    <div class="col" id="offcanvas-main-col-3">
+                                        <button id="btn" class="btn">Add Class</button>
+                                    </div>
+                                    </form>
+                                  </div>
+                                  </section>
+                              </div>
                           </div>
+                          <!-- offcanva end  -->
                       </div>
                   </div>
                   <div class="col" id="search-col">
                       <a><i class="fa fa-search" aria-hidden="true"></i></a>
                   </div>
               </div>
-          </section>      <!--------Sort-by section start ---------->
+          </section> <!--------Sort-by section start ---------->
 
-          <section>     <!--------Main Section branch-list start here--------->
+          <section> <!--------Main Section branch-list start here--------->
               <div class="row" id="main-sec-row">
                   <a href="">
                       <div class="col-12" id="main-sec-box1">
@@ -68,10 +102,9 @@
                           </div>
                       </div>
                   </a>
-
               </div>
-          </section>  <!--------Main Section branch-list ends here--------->
-      </section>      <!------Main section end here--------->
+          </section> <!--------Main Section branch-list ends here--------->
+      </section> <!------Main section end here--------->
 
 
       <section id="pagination-sec">
@@ -79,4 +112,8 @@
       </section>
 
   </section>
+
+
+
+
 </body>

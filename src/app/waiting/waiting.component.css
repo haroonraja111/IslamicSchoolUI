@@ -1,0 +1,89 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~@fortawesome/fontawesome-free/css/solid.css";
+@import "~@fortawesome/fontawesome-free/css/regular.css";
+@import "~@fortawesome/fontawesome-free/css/brands.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  /* border: 1px solid red; */
+}
+:host {
+  --color-1: #f5dc65;
+  --color: #586e6b;
+  --background: #fff;
+  --box-color: #daf1d0;
+}
+body {
+  background-color: var(--box-color);
+  height: 100vh;
+}
+
+/*   header section styling start here */
+#header-section {
+  position: relative;
+  top: 10px;
+  background-color:  bisque;
+}
+#header-row {
+  max-width: 103%;
+  height: 4vh;
+  display: grid;
+  grid-template-columns: 2fr 88px;
+}
+#header-col-1 {
+  position: relative;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  max-width: 60%;
+}
+#header-col-1 p {
+  font-size: 20px;
+  font-weight: 400;
+}
+#header-col-2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+/*   hero section styling start here */
+#hero-section {
+  position: relative;
+  top: 197px;
+  max-width: 100%;
+  height: 28vh;
+}
+#hero-row {
+  max-width: 100%;
+}
+#hero-row .col {
+  display: flex;
+  justify-content: center;
+}
+#hero-row .col img {
+  max-width: 57%;
+}
+/* main heading section styling start here */
+#main-heading-section {
+  position: relative;
+  top: 180px;
+}
+
+#main-heading-row .col {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  font-weight: 300;
+}
+#main-heading-row .col h2{
+    font-weight: 300;
+}
+

@@ -15,8 +15,10 @@ import { RoleManagmentComponent } from './Admin/role-managment/role-managment.co
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { RoleModalComponent } from './Admin/role-modal/role-modal.component';
 import { AdminBrancheslistComponent } from './Admin/admin-brancheslist/admin-brancheslist.component';
-
-
+import { WaitingComponent } from './waiting/waiting.component';
+import { SupervisorPanelComponent } from './supervisor/supervisor-panel/supervisor-panel.component';
+import { TeacherPanelComponent } from './teacher/teacher-panel/teacher-panel.component';
+import { RoleGuard } from 'src/guards/role.guard';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import { AdminBrancheslistComponent } from './Admin/admin-brancheslist/admin-bra
     AdminPanelComponent,
     RoleManagmentComponent,
     RoleModalComponent,
-    AdminBrancheslistComponent
+    AdminBrancheslistComponent,
+    WaitingComponent,
+    SupervisorPanelComponent,
+    TeacherPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,8 @@ import { AdminBrancheslistComponent } from './Admin/admin-brancheslist/admin-bra
     ModalModule.forRoot()
   ],
   providers: [
-    { provide: FaIconLibrary, useValue: faBinoculars }
+    { provide: FaIconLibrary, useValue: faBinoculars },
+    RoleGuard
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { map, ReplaySubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from 'src/Models/user';
@@ -13,7 +14,7 @@ export class AccountService {
   currentUser$ = this.currentUserSource.asObservable();
   user!: User;
 
-constructor(private http: HttpClient) { }
+constructor(private http: HttpClient, private router: Router) { }
 login(model: any){
   return this.http.post<User>(this.baseUrl + 'Account/login', model).pipe(
     map((response: User) =>{

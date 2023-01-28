@@ -142,6 +142,9 @@ body img {
     justify-content: flex-start;
 }
 #login-btn-row #login-col-2 button {
+  position: relative;
+  top: -4vh;
+  left: 11vw;
   width: 29vw;
   background-color: var(--color-1);
   color: var(--color);

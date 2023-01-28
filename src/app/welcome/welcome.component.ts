@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
-import { faBinoculars } from '@fortawesome/free-solid-svg-icons';
+import { ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { RoleGuard } from 'src/guards/role.guard';
 import { User } from 'src/Models/user';
 import { AccountService } from 'src/Services/account.service';
 
@@ -17,24 +18,17 @@ export class WelcomeComponent implements OnInit {
   user!: User;
   errorMessage!: string;
 
-  constructor(private accountsService: AccountService, private router: Router) { }
+  constructor(private accountsService: AccountService, private roleGuard: RoleGuard,
+    private route: ActivatedRoute, private router: Router) { }
   model: any = {};
 
   ngOnInit(): void {
   }
-  onLogin(){
-    this.accountsService.login(this.model).subscribe(()=>{});
-    const roles = localStorage.getItem('roles');
-    if(roles?.includes('DEAN')){
-      this.router.navigate(['dean']);
-    }else if(roles?.includes('ADMIN')){
-      this.router.navigate(['admin']);
-    }else if(roles?.includes('TEACHER')){
-      this.router.navigate(['teacher-panel']);
-    }else{
-      this.router.navigate(['']);
-    }
+  onLogin() {
+    this.accountsService.login(this.model).subscribe(()=>{
+    });
   }
+
   onLogout(){
     this.accountsService.logout();
     this.router.navigate(['/welcome']);
