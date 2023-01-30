@@ -19,8 +19,8 @@ getUserWithRoles(){
 updateUserRoles(username: string, roles: string[]){
   return this.http.post(this.baseUrl + 'Dean/edit-roles/' + username + '?roles=' + roles, {})
 }
-public getBranches(): Observable<Branches> {
-  return this.http.get<Branches>(this.baseUrl + 'Branch');
+public getBranches(): Observable<Branches[]> {
+  return this.http.get<Branches[]>(this.baseUrl + 'Branch');
 }
 public addBracnh(bracnh: Branches): Observable<Branches>{
   return this.http.post<Branches>(this.baseUrl + 'Branch', bracnh);

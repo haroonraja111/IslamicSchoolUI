@@ -10,16 +10,20 @@ import { AdminService } from 'src/Services/admin.service';
 })
 export class AdminBrancheslistComponent implements OnInit{
 
-  branch: Branches;
+  branch: Branches[];
 
   constructor(private service:AdminService){}
   addbranchForm: FormGroup;
+  showSearch = false;
 
   ngOnInit(): void {
     this.getbranches();
     this.addbranchForm = new FormGroup({
-      name: new FormControl(''),
-      address: new FormControl('')
+      branchName: new FormControl(''),
+      city: new FormControl(''),
+      address: new FormControl(''),
+      branchCode: new FormControl(''),
+      branchAdminId: new FormControl('')
     });
   }
   getbranches(){
@@ -37,5 +41,8 @@ export class AdminBrancheslistComponent implements OnInit{
         console.log(error);
       }
     );
+  }
+  toggleSearch() {
+    this.showSearch = !this.showSearch;
   }
 }

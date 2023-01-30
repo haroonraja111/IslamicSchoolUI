@@ -81,18 +81,19 @@
                       </div>
                   </div>
                   <div class="col" id="search-col">
-                      <a><i class="fa fa-search" aria-hidden="true"></i></a>
+                      <a><i class="fa" [ngClass]="{'fa-search': !showSearch, 'fa-times': showSearch}" aria-hidden="true" (click)="toggleSearch()"></i></a>
+                      <input *ngIf="showSearch" placeholder="Search">
                   </div>
               </div>
           </section> <!--------Sort-by section start ---------->
 
           <section> <!--------Main Section branch-list start here--------->
               <div class="row" id="main-sec-row">
-                  <a href="">
+                  <a href="" *ngFor="let item of branch">
                       <div class="col-12" id="main-sec-box1">
                           <div class="row">
                               <div class="col-9" id="branch-name-col">
-                                  <h3>Branch A</h3>
+                                  <h3>{{item.branchName}}</h3>
                                   <p> Robert Robertson, 1234 NW Bobcat Lane, St. Robert.</p>
                               </div>
 

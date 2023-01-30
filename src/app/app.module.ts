@@ -31,7 +31,7 @@ import { RoleGuard } from 'src/guards/role.guard';
     AdminBrancheslistComponent,
     WaitingComponent,
     SupervisorPanelComponent,
-    TeacherPanelComponent
+    TeacherPanelComponent,
   ],
   imports: [
     BrowserModule,
