@@ -25,4 +25,7 @@ public getBranches(): Observable<Branches[]> {
 public addBracnh(bracnh: Branches): Observable<Branches>{
   return this.http.post<Branches>(this.baseUrl + 'Branch', bracnh);
 }
+public getUserforbranchSupervisor():Observable<User[]>{
+  return this.http.get<User[]>(this.baseUrl + 'User/admins');
+}
 }

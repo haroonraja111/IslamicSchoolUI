@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Branches } from 'src/Models/branches';
+import { User } from 'src/Models/user';
 import { AdminService } from 'src/Services/admin.service';
 
 @Component({
@@ -11,19 +12,22 @@ import { AdminService } from 'src/Services/admin.service';
 export class AdminBrancheslistComponent implements OnInit{
 
   branch: Branches[];
+  branchsupervisors: User[];
+  searchText: string = '';
+  addBranchForm: FormGroup;
 
   constructor(private service:AdminService){}
-  addbranchForm: FormGroup;
-  showSearch = false;
+
 
   ngOnInit(): void {
     this.getbranches();
-    this.addbranchForm = new FormGroup({
-      branchName: new FormControl(''),
-      city: new FormControl(''),
-      address: new FormControl(''),
-      branchCode: new FormControl(''),
-      branchAdminId: new FormControl('')
+    this.getUsersforSupervisors();
+    this.addBranchForm = new FormGroup({
+      branchName: new FormControl('', Validators.required),
+      city: new FormControl('', Validators.required),
+      address: new FormControl('', Validators.required),
+      branchCode: new FormControl('', Validators.required),
+      branchAdminId: new FormControl('', Validators.required)
     });
   }
   getbranches(){
@@ -33,16 +37,25 @@ export class AdminBrancheslistComponent implements OnInit{
     })
   }
   addBranch() {
-    this.service.addBracnh(this.addbranchForm.value).subscribe(
-      (response) => {
+    this.service.addBracnh(this.addBranchForm.value).subscribe(
+      response => {
+        this.getbranches();
         console.log(response);
+        console.log("done");
       },
       (error) => {
         console.log(error);
       }
     );
   }
-  toggleSearch() {
-    this.showSearch = !this.showSearch;
+  getUsersforSupervisors(){
+    this.service.getUserforbranchSupervisor().subscribe(src =>{
+      this.branchsupervisors = src;
+      console.log(src);
+    })
+  }
+  onSearchTextEntered(searchValue: string){
+    this.searchText = searchValue;
+    console.log(this.searchText);
   }
 }

@@ -19,6 +19,7 @@ import { WaitingComponent } from './waiting/waiting.component';
 import { SupervisorPanelComponent } from './supervisor/supervisor-panel/supervisor-panel.component';
 import { TeacherPanelComponent } from './teacher/teacher-panel/teacher-panel.component';
 import { RoleGuard } from 'src/guards/role.guard';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { RoleGuard } from 'src/guards/role.guard';
     WaitingComponent,
     SupervisorPanelComponent,
     TeacherPanelComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

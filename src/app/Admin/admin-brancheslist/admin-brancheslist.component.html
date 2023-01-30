@@ -62,15 +62,30 @@
 
                                   <!-- main inputs section -->
                                   <div class="row" id="offcanvas-main-row">
-                                    <form [formGroup]="addbranchForm" (ngSubmit)="addBranch()">
+                                    <form [formGroup]="addBranchForm" (ngSubmit)="addBranch()">
                                       <div class="col" id="offcanvas-main-col-1">
-                                        <label>Class-Name <input type="text" formControlName="className" /></label>
+                                        <label>BranchName <input type="text" formControlName="branchName" /></label>
                                     </div>
                                     <div class="col" id="offcanvas-main-col-2">
-                                        <label><input type="text" formControlName="classTime"/>Class-Time </label>
+                                        <label><input type="text" formControlName="city"/>City </label>
                                     </div>
+                                    <div class="col" id="offcanvas-main-col-1">
+                                      <label>Address <input type="text" formControlName="address" /></label>
+                                  </div>
+                                  <div class="col" id="offcanvas-main-col-2">
+                                    <label><input type="text" formControlName="branchCode"/>B.Code </label>
+                                </div>
+                                <div class="col">
+                                  <label>Class-Name</label>
+                                  <select class="form-control" formControlName="branchAdminId">
+                                    <option value="">Select Supervisor</option>
+                                    <option *ngFor="let item of branchsupervisors" value="{{item.id}}">
+                                      {{item.userName}}
+                                    </option>
+                                  </select>
+                                </div>
                                     <div class="col" id="offcanvas-main-col-3">
-                                        <button id="btn" class="btn">Add Class</button>
+                                        <button id="btn" class="btn" [disabled]="addBranchForm.invalid" data-bs-dismiss="offcanvas" aria-label="Close">Add Class</button>
                                     </div>
                                     </form>
                                   </div>
@@ -81,28 +96,29 @@
                       </div>
                   </div>
                   <div class="col" id="search-col">
-                      <a><i class="fa" [ngClass]="{'fa-search': !showSearch, 'fa-times': showSearch}" aria-hidden="true" (click)="toggleSearch()"></i></a>
-                      <input *ngIf="showSearch" placeholder="Search">
+                    <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
                   </div>
               </div>
           </section> <!--------Sort-by section start ---------->
 
           <section> <!--------Main Section branch-list start here--------->
-              <div class="row" id="main-sec-row">
-                  <a href="" *ngFor="let item of branch">
-                      <div class="col-12" id="main-sec-box1">
-                          <div class="row">
-                              <div class="col-9" id="branch-name-col">
-                                  <h3>{{item.branchName}}</h3>
-                                  <p> Robert Robertson, 1234 NW Bobcat Lane, St. Robert.</p>
-                              </div>
+              <div class="row" id="main-sec-row"  >
+                <div >
+                  <a href="" >
+                    <div class="col-12" id="main-sec-box1" *ngFor="let item of branch">
+                        <div class="row" *ngIf="searchText === '' || item.branchName.toLowerCase().includes(searchText)">
+                            <div class="col-9" id="branch-name-col">
+                                <h3>{{item.branchName}}</h3>
+                                <p> Robert Robertson, 1234 NW Bobcat Lane, St. Robert.</p>
+                            </div>
 
-                              <div class="col-3" id="branch-icon-col">
-                                  <i class="fa-solid fa-trash"></i>
-                              </div>
-                          </div>
-                      </div>
-                  </a>
+                            <div class="col-3" id="branch-icon-col">
+                                <i class="fa-solid fa-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
               </div>
           </section> <!--------Main Section branch-list ends here--------->
       </section> <!------Main section end here--------->

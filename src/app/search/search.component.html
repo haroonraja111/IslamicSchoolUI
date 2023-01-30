@@ -1,0 +1,2 @@
+<a><i class="fa" [ngClass]="{'fa-search': !showSearch, 'fa-times': showSearch}" aria-hidden="true" (click)="toggleSearch()"></i></a>
+<input *ngIf="showSearch" placeholder="Search" [(ngModel)]="enteredSearchValue" (input)="onSearchTextChanged()">
