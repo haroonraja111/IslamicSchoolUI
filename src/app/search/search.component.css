@@ -5,6 +5,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 
+:host{
+  --light-green : #cceccc;
+  --dark-green : #71C650;
+  --font-color : #586E6B;
+  --golden : #BC9C00;
+  --main-family : font-family: "Rubik", sans-serif;
+}
+
+
 input {
   position: absolute;
   top: 50%;
@@ -15,4 +24,15 @@ input {
 }
 .show-search input {
   width: 200px;
+}
+input.ng-untouched.ng-pristine.ng-valid {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid var(--font-color);
+  color: var(--dark-green);
+  outline: none;
+}
+.fa-times{
+  font-size: 20px;
 }
