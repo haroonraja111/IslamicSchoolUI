@@ -48,6 +48,14 @@ export class AdminBrancheslistComponent implements OnInit{
       }
     );
   }
+  deleteBranch(id: number){
+    this.service.deleteBranch(id)
+    .subscribe(
+      response =>{
+        this.getbranches();
+      }
+    )
+  }
   getUsersforSupervisors(){
     this.service.getUserforbranchSupervisor().subscribe(src =>{
       this.branchsupervisors = src;

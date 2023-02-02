@@ -25,6 +25,9 @@ public getBranches(): Observable<Branches[]> {
 public addBracnh(bracnh: Branches): Observable<Branches>{
   return this.http.post<Branches>(this.baseUrl + 'Branch', bracnh);
 }
+public deleteBranch(id: number): Observable<Branches>{
+  return this.http.delete<Branches>(this.baseUrl + '/' + id);
+}
 public getUserforbranchSupervisor():Observable<User[]>{
   return this.http.get<User[]>(this.baseUrl + 'User/admins');
 }
