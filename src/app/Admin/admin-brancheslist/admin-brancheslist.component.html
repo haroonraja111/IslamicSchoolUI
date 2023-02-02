@@ -104,20 +104,20 @@
           <section> <!--------Main Section branch-list start here--------->
               <div class="row" id="main-sec-row"  >
                 <div >
-                  <a href="" >
+
                     <div class="col-12" id="main-sec-box1" *ngFor="let item of branch">
                         <div class="row" *ngIf="searchText === '' || item.branchName.toLowerCase().includes(searchText)">
-                            <div class="col-9" id="branch-name-col">
+
+                            <div class="col-9" id="branch-name-col" (click)="toBranchProfile(item.id)">
                                 <h3>{{item.branchName}}</h3>
                                 <p> Robert Robertson, 1234 NW Bobcat Lane, St. Robert.</p>
-                            </div>
-
+                                </div>
                             <div class="col-3" id="branch-icon-col">
-                                <i class="fa-solid fa-trash" (click)="deleteBranch(item.id)"></i>
+                                <a (click)="deleteBranch(item.id)"><i class="fa-solid fa-trash"></i></a>
                             </div>
                         </div>
                     </div>
-                </a>
+
                 </div>
               </div>
           </section> <!--------Main Section branch-list ends here--------->

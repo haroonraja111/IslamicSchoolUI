@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Branches } from 'src/Models/branches';
 import { User } from 'src/Models/user';
 import { AdminService } from 'src/Services/admin.service';
@@ -16,7 +17,7 @@ export class AdminBrancheslistComponent implements OnInit{
   searchText: string = '';
   addBranchForm: FormGroup;
 
-  constructor(private service:AdminService){}
+  constructor(private service:AdminService, private router: Router){}
 
 
   ngOnInit(): void {
@@ -55,6 +56,13 @@ export class AdminBrancheslistComponent implements OnInit{
         this.getbranches();
       }
     )
+  }
+  toBranchProfile(id:number){
+    this.service.getBranch(id).subscribe(
+      response =>{
+        this.router.navigate(['admin-branchprofile/'+ id])
+      }
+    );
   }
   getUsersforSupervisors(){
     this.service.getUserforbranchSupervisor().subscribe(src =>{

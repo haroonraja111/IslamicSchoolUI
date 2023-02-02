@@ -20,6 +20,7 @@ import { SupervisorPanelComponent } from './supervisor/supervisor-panel/supervis
 import { TeacherPanelComponent } from './teacher/teacher-panel/teacher-panel.component';
 import { RoleGuard } from 'src/guards/role.guard';
 import { SearchComponent } from './search/search.component';
+import { AdminBranchprofileComponent } from './Admin/admin-branchprofile/admin-branchprofile.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { SearchComponent } from './search/search.component';
     SupervisorPanelComponent,
     TeacherPanelComponent,
     SearchComponent,
+    AdminBranchprofileComponent,
   ],
   imports: [
     BrowserModule,

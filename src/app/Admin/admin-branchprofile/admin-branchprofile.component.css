@@ -1,0 +1,582 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~@fortawesome/fontawesome-free/css/solid.css";
+@import "~@fortawesome/fontawesome-free/css/regular.css";
+@import "~@fortawesome/fontawesome-free/css/brands.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  /* border: 1px solid red; */
+}
+
+:host {
+  --box1-color: #bd6868;
+}
+
+body {
+  background-image: linear-gradient(to right, #ffffff, #ffffff);
+}
+#parent-section {
+  /* background-image: linear-gradient(to right, #d0efc4, #93ab8a); */
+  max-width: 100%;
+  height: 100vh;
+}
+/* Header section styling start here */
+#header {
+  max-width: 100%;
+}
+#header-row {
+  display: flex;
+  max-width: 103%;
+  height: 5vh;
+  justify-content: space-around;
+}
+#header-img img {
+  position: absolute;
+  top: -107px;
+  right: 0;
+  bottom: 0;
+  left: 120px;
+  width: 54%;
+  height: auto;
+  transform: rotate(747deg);
+  opacity: 0.2;
+}
+#header-last-icon {
+  position: absolute;
+  top: 9px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  right: 0px;
+  left: 40vh;
+  max-width: fit-content;
+  font-size: 23px;
+  color: #55913e;
+}
+#header-first-icon {
+  position: absolute;
+  top: 9px;
+  display: flex;
+  justify-content: unset;
+  text-align: center;
+  right: 0;
+  left: 26px;
+  max-width: fit-content;
+  font-size: 23px;
+  color: #55913e;
+}
+
+/* Hero section styling start here */
+#hero-section {
+  height: 20vh;
+  position: absolute;
+  top: 12vh;
+  left: 0;
+  right: 0;
+}
+#hero-row {
+  /* display: flex; */
+  align-content: center;
+  max-width: 93%;
+  height: 32vh;
+  border-radius: 10% 30% 50% 70%;
+  text-align: start;
+  position: absolute;
+  top: -25px;
+  right: 0px;
+  left: 14px;
+  /* z-index: -1; */
+  text-overflow: unset;
+  background: linear-gradient(to right, #d0efc4, #91d678);
+}
+#hero-col {
+  max-width: fit-content;
+  position: relative;
+  left: 60px;
+  top: -28px;
+  width: 79%;
+  height: 17vh;
+  color: #55913e;
+  display: grid;
+  align-content: space-between;
+}
+#hero-col b {
+  font-weight: 100;
+}
+#hero-col label {
+  font-weight: 800;
+}
+#hero-col h1 {
+  color: #55913e;
+  font-size: 36px;
+  max-width: fit-content;
+}
+#hero-col i {
+  color: #55913e;
+}
+#hero-icon-col {
+  max-width: fit-content;
+  position: relative;
+  left: 80px;
+  top: -35px;
+}
+#hero-icon-col i{
+  color:#4c6912
+}
+/* -----------main section styling start here---------- */
+#main-section {
+  position: relative;
+  top: 42vh;
+  display: flex;
+  max-width: 100%;
+}
+#main-sec-row1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 43vh;
+  max-width: 51%;
+  display: grid;
+  align-content: space-evenly;
+}
+.dot {
+  height: 6px;
+  width: 6px;
+  margin-left: 4px;
+  background-color: #b86464;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: right;
+}
+
+#main-sec-row2 {
+  position: absolute;
+  left: 25vh;
+  right: 0;
+  max-width: 49%;
+  height: 43vh;
+  display: grid;
+  align-content: space-evenly;
+}
+
+/* ------teacher box styling start here------- */
+#teacher-box {
+  position: relative;
+  left: 15px;
+  max-width: 89%;
+  height: 29vh;
+  border-radius: 10px;
+  color: var(--box1-color);
+  background-color: #f5cbc2;
+}
+#techr-inr-header-row {
+  position: absolute;
+  top: 9px;
+  right: 11px;
+  max-width: fit-content;
+  left: 11px;
+}
+#techr-inr-col-1 {
+  max-width: fit-content;
+  height: auto;
+  display: flex;
+  align-content: flex-end;
+}
+#techr-inr-col-1 img {
+  max-width: 32%;
+}
+#techr-inr-col-2 {
+  display: initial;
+  text-align: end;
+}
+#techr-inr-main-row {
+  position: absolute;
+  top: 48px;
+  right: 11px;
+  left: 11px;
+  height: 20vh;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 100;
+}
+#techr-inr-main-row h2 {
+  font-size: 33px;
+}
+#techr-inr-fotr-row {
+  position: absolute;
+  top: 196px;
+  right: 11px;
+  left: 11px;
+  display: flex;
+  text-align: end;
+  height: 41px;
+  align-content: flex-end;
+}
+/*------------- Supervisor box styling start here ----------- */
+
+#supervisor-box {
+  position: relative;
+  left: 15px;
+  max-width: 89%;
+  height: 12vh;
+  border-radius: 10px;
+  color: #82a048;
+  display: grid;
+  align-content: center;
+  background-color: #c6ee9e;
+}
+#supervisor-box-col-1 {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  font-size: 18px;
+  font-weight: 500;
+  font-weight: 100;
+}
+#supervisor-box-col-2 {
+  display: grid;
+  text-align: end;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+}
+/* Supervisor offcanvas styling start here */
+.supervisor-offcanvas-header {
+  display: flex;
+  height: 4vh;
+}
+.offcanvas-title {
+  font-size: 16px;
+  font-weight: 100;
+  color: #82a048;
+}
+.supervisor-offcanvas-header button {
+  position: absolute;
+  right: 17px;
+  top: 6px;
+  font-size: 20px;
+  border: none;
+}
+#teacher-offcanvas-row {
+  background-color: #c9dfc0;
+  position: absolute;
+  top: 46px;
+  left: 14px;
+  right: 15px;
+  z-index: -1;
+}
+#teacher-offcanvas-row .col {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#teacher-offcanvas-row img {
+  width: 387px;
+}
+
+/* offcanvas Hero row styling  */
+.offcanvas-start {
+  background-color: #c9dfc0;
+}
+#offcanvas-hero {
+  position: absolute;
+  top: 462px;
+  left: 34px;
+  width: 100%;
+}
+#offcanves-name-col p {
+  color: #db7b1b;
+  font-style: italic;
+}
+#offcanvas-hero h2 {
+  font-size: 20px;
+  color: #82a048;
+}
+#offcanves-edit-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#offcanves-edit-col .col {
+  max-width: 22%;
+  border-radius: 22px;
+  height: 5vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: #f6f1f1;
+  background-color: #799f69;
+}
+#offcanvas-main {
+  position: absolute;
+  top: 579px;
+  left: 37px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1em;
+  column-gap: 6rem;
+}
+#offcanvas-main h3 {
+  color: #4c6912;
+  font-weight: 200;
+  font-size: 20px;
+}
+#offcanvas-main p {
+  text-decoration: underline;
+  color: #82a048;
+}
+#offcanvas-main .col i {
+  padding-left: 10px;
+}
+
+/* -------------------Branch box styling start here--------------------- */
+
+#branch-box {
+  position: relative;
+  left: 0px;
+  max-width: 92%;
+  height: 20vh;
+  border-radius: 10px;
+  color: #b49948;
+  background-color: #f5dab4;
+  top: 3px;
+}
+#branch-box-row-1{
+  padding: 10px;
+}
+#branch-box-header-col-1 img{
+  width: 7vw;
+}
+#branch-box-header-col-2{
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-content: center;
+}
+#branch-box-row-2{
+  padding: 10px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+#branch-box-row-3{
+  padding: 10px;
+  display: grid;
+  justify-content: flex-end;
+  align-content: center;
+  text-align: center;
+}
+/* offcanvas Branch styling start here */
+#offcanvasRight {
+  background-color: #f5dab4;
+}
+#offcanvasRightLabel {
+  position: relative;
+  top: 67px;
+  left: 8px;
+  color: #a8733f;
+  font-size: 25px;
+}
+#offcanvas-header {
+  max-width: 100%;
+}
+#btn-close {
+  position: relative;
+  left: -21px;
+  top: 4px;
+}
+#offcanvas-body {
+  height: 91vh;
+  position: absolute;
+  top: 133px;
+  left: 0;
+  right: 0;
+}
+#offcanvas-input-row {
+  display: grid;
+  grid-template-columns: 373px;
+  position: relative;
+  left: 0px;
+  padding: 10px;
+}
+#edit-branch-name-col {
+  height: 10vh;
+  display: grid;
+  max-width: 97%;
+}
+#edit-branch-name-col label {
+  display: flex;
+  align-content: flex-end;
+  height: 0;
+  color: #fa9c18;
+}
+#edit-branch-name-col input {
+  display: flex;
+  align-items: flex-end;
+}
+#edit-branch-city-col {
+  padding-top: 10px;
+  height: 10vh;
+  display: grid;
+  max-width: 97%;
+}
+#edit-branch-city-col label {
+  display: flex;
+  align-content: flex-end;
+  height: 0;
+  color: #fa9c18;
+}
+#edit-branch-city-col input {
+  display: flex;
+  align-items: flex-end;
+}
+input[type="text"] {
+  height: fit-content;
+  border-bottom: 1px solid rgb(56, 42, 42);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  background: none;
+}
+
+#edit-branch-address-col {
+  height: 10vh;
+  display: grid;
+  max-width: 97%;
+}
+#edit-branch-address-col label {
+  display: flex;
+  align-content: flex-end;
+  height: 0;
+  color: #fa9c18;
+}
+#edit-branch-address-col input {
+  display: flex;
+  align-items: flex-end;
+}
+
+#edit-branch-code-col {
+  height: 10vh;
+  display: grid;
+  max-width: 97%;
+}
+#edit-branch-code-col label {
+  display: flex;
+  align-content: flex-end;
+  height: 0;
+  color: #fa9c18;
+}
+#edit-branch-code-col input {
+  display: flex;
+  align-items: flex-end;
+}
+#branch-offcanvas-btn .col {
+  display: flex;
+  justify-content: flex-end;
+}
+#branch-offcanvas-btn {
+  /* border: 1px solid red; */
+  position: relative;
+  left: 0;
+  max-width: 95%;
+}
+#branch-offcanvas-btn button {
+  border: none;
+  width: 99px;
+  height: 5vh;
+  background-color: #f5c685;
+  color: #f4e9d9;
+  font-weight: 500;
+  border-radius: 5px;
+}
+#branche-offcanvas-footer-row {
+  position: absolute;
+  top: 51vh;
+  left: 22px;
+}
+#branche-offcanvas-footer-row .col img {
+  width: 88vw;
+}
+
+/* ----------- Student Box section styling start here ------------ */
+#student-box {
+  position: relative;
+  left: 0px;
+  top: 7px;
+  max-width: 91%;
+  height: 20vh;
+  border-radius: 10px;
+  color: #baaf3f;
+  background-color: #f5e6b7;
+}
+#student-box-header-row {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  right: 10px;
+}
+#student-box-header-col-1 img {
+  max-width: 38%;
+}
+#student-box-header-col-2 {
+  display: inline;
+  text-align: end;
+  align-content: center;
+}
+#student-inr-main-row {
+  position: absolute;
+  top: 42px;
+  left: 10px;
+  right: 10px;
+  height: 10vh;
+  display: grid;
+  text-align: center;
+  align-content: center;
+  font-size: 24px;
+  font-weight: 100;
+}
+#student-inr-main-row h2 {
+  font-size: 33px;
+}
+#student-inr-fotr-row {
+  position: absolute;
+  top: 128px;
+  left: 10px;
+  right: 10px;
+  display: grid;
+  text-align: end;
+  height: 27px;
+  align-content: flex-end;
+}
+/* ----------Footer section------- */
+#footer-section {
+  position: absolute;
+  top: 93vh;
+}
+#footer-section .row {
+  max-width: 103%;
+  display: flex;
+  text-align: end;
+}
+#footer-section .row .col img {
+  max-width: 12%;
+}
