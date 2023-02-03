@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'signup', component:SignupComponent},
   {path:'waiting',component:WaitingComponent},
   //Admin Routes
-  {path:'admin-panel',component:AdminPanelComponent, canActivate:[RoleGuard]},
+  {path:'admin-panel',component:AdminPanelComponent},
   {path:'role-managment', component:RoleManagmentComponent},
   {path:'admin-brancheslist', component:AdminBrancheslistComponent},
   {path:'admin-branchprofile/:id',component:AdminBranchprofileComponent},
