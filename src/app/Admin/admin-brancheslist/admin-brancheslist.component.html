@@ -1,89 +1,103 @@
 <body>
-  <section id="main-Section">
+    <section id="main-Section">
 
-      <section> <!--header-section start-->
-          <div class="row" id="header-row">
-              <div class="col" id="first-icon-col">
-                  <i class="fa fa-arrow-left" aria-hidden="true"></i>
-              </div>
-              <div class="col" id="second-icon-col">
-                  <!-- Three dots html start here -->
-                  <!-- <button class="btn"><i class="fa fa-plus" aria-hidden="true"></i></button> -->
-              </div>
-          </div>
-          <!-- </div> -->
-      </section> <!--header-section end-->
+        <section> <!--header-section start-->
+            <div class="row" id="header-row">
+                <div class="col" id="first-icon-col">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </div>
+                <div class="col" id="second-icon-col">
+                    <!-- Three dots html start here -->
+                    <!-- <button class="btn"><i class="fa fa-plus" aria-hidden="true"></i></button> -->
+                </div>
+            </div>
+            <!-- </div> -->
+        </section> <!--header-section end-->
 
 
-      <section id="hero"> <!-- Hero-Section start-->
-          <div class="row" id="hero-row">
-              <div class="col" id="hero-heading">
-                  <h1>Branches</h1>
-                  <h5><span>Currently 40+</span><span>Active Branches</span></h5>
+        <section id="hero"> <!-- Hero-Section start-->
+            <div class="row" id="hero-row">
+                <div class="col" id="hero-heading">
+                    <h1>Branches</h1>
+                    <h5><span>Currently 40+</span><span>Active Branches</span></h5>
 
-              </div>
-              <div class="col" id="hero-img-col">
-                  <img src="/assets/school-building.png" alt="">
-              </div>
-          </div>
-      </section> <!--Hero-Section end-->
+                </div>
+                <div class="col" id="hero-img-col">
+                    <img src="/assets/school-building.png" alt="">
+                </div>
+            </div>
+        </section> <!--Hero-Section end-->
 
-      <section id="sortby-sec-parent"> <!--------Main Section start here--------->
-          <section id="sortby-main"> <!---------Sort-by section start --------->
-              <div class="row" id="sortby-sec-row">
-                  <div class="col" id="dropdown-btn">
-                      <div class="btn-group">
-                          <button class="btn" type="button" data-bs-toggle="offcanvas"
-                              data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                              <i class="fa fa-plus" aria-hidden="true"></i>
-                          </button>
-                          <!-- offcanvas start-->
-                          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-                              aria-labelledby="offcanvasExampleLabel">
-                              <div class="offcanvas-header" >
-                                  <div class="row" id="sortby-offcanva-top-row" >
-                                      <div class="col" id="sortby-offcanva-top-col-1">
-                                          <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5> -->
-                                      </div>
-                                      <div class="col" id="sortby-offcanva-top-col-2">
-                                          <button type="button" class="btn-close text-reset"
-                                              data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="offcanvas-body">
-                                  <section id="input-feild-section">
-                                      <!-- hero section -->
-                                  <div class="row" id="offcanvas-hero-row">
-                                      <div class="col" id="offcanvas-hero-col">
-                                          <h2>Add New Class</h2>
-                                      </div>
-                                  </div>
-
-                                  <!-- main inputs section -->
-                                  <div class="row" id="offcanvas-main-row">
-                                    <form [formGroup]="addBranchForm" (ngSubmit)="addBranch()">
-                                      <div class="col" id="offcanvas-main-col-1">
-                                        <label>BranchName <input type="text" formControlName="branchName" /></label>
+        <section id="sortby-sec-parent"> <!--------Main Section start here--------->
+            <section id="sortby-main"> <!---------Sort-by section start --------->
+                <div class="row" id="sortby-sec-row">
+                    <div class="col" id="dropdown-btn">
+                        <div class="btn-group">
+                            <button class="btn" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <!-- offcanvas start-->
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                                aria-labelledby="offcanvasExampleLabel">
+                                <div class="offcanvas-header">
+                                    <div class="row" id="sortby-offcanva-top-row">
+                                        <div class="col" id="sortby-offcanva-top-col-1">
+                                            <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5> -->
+                                        </div>
+                                        <div class="col" id="sortby-offcanva-top-col-2">
+                                            <button type="button" class="btn-close text-reset"
+                                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
                                     </div>
-                                    <div class="col" id="offcanvas-main-col-2">
-                                        <label><input type="text" formControlName="city"/>City </label>
-                                    </div>
-                                    <div class="col" id="offcanvas-main-col-1">
-                                      <label>Address <input type="text" formControlName="address" /></label>
-                                  </div>
-                                  <div class="col" id="offcanvas-main-col-2">
-                                    <label><input type="text" formControlName="branchCode"/>B.Code </label>
                                 </div>
-                                <div class="col">
-                                  <label>Class-Name</label>
-                                  <select class="form-control" formControlName="branchAdminId">
-                                    <option value="">Select Supervisor</option>
-                                    <option *ngFor="let item of branchsupervisors" value="{{item.id}}">
-                                      {{item.userName}}
-                                    </option>
-                                  </select>
+                                <div class="offcanvas-body">
+                                    <section id="input-feild-section">
+                                        <!-- hero section -->
+                                        <div class="row" id="offcanvas-hero-row">
+                                            <div class="col" id="offcanvas-hero-col">
+                                                <h2>Add New Class</h2>
+                                            </div>
+                                        </div>
+
+                                        <!-- main inputs section -->
+                                        <div class="row" id="offcanvas-main-row">
+                                            <form [formGroup]="addBranchForm" (ngSubmit)="addBranch()">
+                                                <div class="col" id="offcanvas-main-col-1">
+                                                    <label>BranchName <input type="text"
+                                                            formControlName="branchName" /></label>
+                                                </div>
+                                                <div class="col" id="offcanvas-main-col-2">
+                                                    <label><input type="text" formControlName="city" />City </label>
+                                                </div>
+                                                <div class="col" id="offcanvas-main-col-1">
+                                                    <label>Address <input type="text"
+                                                            formControlName="address" /></label>
+                                                </div>
+                                                <div class="col" id="offcanvas-main-col-2">
+                                                    <label><input type="text" formControlName="branchCode" />B.Code
+                                                    </label>
+                                                </div>
+                                                <div class="col" id="offcanva-dropdown-col">
+                                                    <label>Class-Name</label>
+                                                    <select class="form-control" formControlName="branchAdminId">
+                                                        <option value="">Select Supervisor</option>
+                                                        <option *ngFor="let item of branchsupervisors"
+                                                            value="{{item.id}}">
+                                                            {{item.userName}}
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <div class="col" id="offcanvas-main-col-3">
+                                                    <button id="btn" class="btn" [disabled]="addBranchForm.invalid"
+                                                        data-bs-dismiss="offcanvas" aria-label="Close">Add
+                                                        Class</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </section>
                                 </div>
+<<<<<<< HEAD
                                     <div class="col" id="offcanvas-main-col-3">
                                         <button id="btn" class="btn" [disabled]="addBranchForm.invalid" data-bs-dismiss="offcanvas" aria-label="Close">Add Class</button>
                                     </div>
@@ -114,21 +128,51 @@
                                 </div>
                             <div class="col-3" id="branch-icon-col">
                                 <a (click)="deleteBranch(item.id)"><i class="fa-solid fa-trash"></i></a>
+=======
+>>>>>>> 53e0bb9a8c32d7a8bd460afc5394e8feac238d4d
                             </div>
+                            <!-- offcanva end  -->
                         </div>
                     </div>
+<<<<<<< HEAD
 
+=======
+                    <div class="col" id="search-col">
+                        <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+                    </div>
+>>>>>>> 53e0bb9a8c32d7a8bd460afc5394e8feac238d4d
                 </div>
-              </div>
-          </section> <!--------Main Section branch-list ends here--------->
-      </section> <!------Main section end here--------->
+            </section> <!--------Sort-by section start ---------->
+
+            <section> <!--------Main Section branch-list start here--------->
+                <div class="row" id="main-sec-row">
+                    <div>
+                        <a href="">
+                            <div class="col-12" id="main-sec-box1" *ngFor="let item of branch">
+                                <div class="row"
+                                    *ngIf="searchText === '' || item.branchName.toLowerCase().includes(searchText)">
+                                    <div class="col-9" id="branch-name-col">
+                                        <h3>{{item.branchName}}</h3>
+                                        <p> Robert Robertson, 1234 NW Bobcat Lane, St. Robert.</p>
+                                    </div>
+
+                                    <div class="col-3" id="branch-icon-col">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section> <!--------Main Section branch-list ends here--------->
+        </section> <!------Main section end here--------->
 
 
-      <section id="pagination-sec">
+        <section id="pagination-sec">
 
-      </section>
+        </section>
 
-  </section>
+    </section>
 
 
 
