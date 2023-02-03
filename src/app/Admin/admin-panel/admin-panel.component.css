@@ -72,7 +72,8 @@ body {
   width: 100%;
   height: 78vh;
   position: relative;
-  left: 10px;
+  left: -13px;
+  top: 22px;
 }
 
 #parent-col-1 {
